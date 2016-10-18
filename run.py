@@ -17,4 +17,4 @@ data_dir = 'data'
 for file in os.listdir(data_dir):
     content = grab.load_content(os.path.join(data_dir, file))
     filtered = filter.filter_content(content, 'table', 'infobox')
-    print(filtered)
+    print(str(filtered).encode('UTF-8'))
