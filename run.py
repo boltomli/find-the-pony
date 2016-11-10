@@ -1,4 +1,4 @@
-from grab import grab, filter
+from grab import grab, process
 import os
 
 entry = 'http://the-site-where-you-can-find-pony-info'
@@ -18,5 +18,5 @@ for link in links:
 
 for file in os.listdir(data_dir):
     content = grab.load_content(os.path.join(data_dir, file))
-    filtered = filter.filter_content(content, 'table', 'infobox')
+    filtered = process.filter_content(content, 'table', 'infobox')
     print(str(filtered).encode('UTF-8'))
